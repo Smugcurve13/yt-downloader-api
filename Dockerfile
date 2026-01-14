@@ -16,7 +16,9 @@ COPY requirements.txt ./
 RUN python -m pip install --upgrade pip setuptools wheel \
     && pip install --no-cache-dir -r requirements.txt
 
-# copy application
+# copy optional cookies file (if provided) and application
+# copying cookies separately helps cache layers when cookies change infrequently
+COPY cookies.txt /app/cookies.txt
 COPY . /app
 
 EXPOSE 8000

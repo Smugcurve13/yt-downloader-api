@@ -15,3 +15,6 @@ old_tests/
 *.db
 __pycache__/
 *.egg-info/
+
+# keep cookies.txt in context (do not ignore)
+!cookies.txt

@@ -28,6 +28,8 @@ def download_and_convert(url, fmt, quality):
         "ignoreerrors": False,
         "noplaylist": True,
         "skip_download": True,
+        "cookiesfrombrowser": None,
+        "cookiefile": "cookies.txt",
     }
     try:
         with yt_dlp.YoutubeDL(ydl_info_opts) as ydl:
